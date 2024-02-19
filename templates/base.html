@@ -13,6 +13,9 @@
         <h1>josefino blog</h1>
     </header>
     <section>
+        <div>
+            <a href="{% url 'create_post' %}">new post</a>
+        </div>
         {% block content %}
         {% endblock content %}
     </section>
