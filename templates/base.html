@@ -11,6 +11,17 @@
 <body>
     <header>
         <h1>josefino blog</h1>
+        <div>
+            {% if user.is_authenticated %}
+            <p>hi {{ user.username }}</p>
+            <p><a href="{% url 'logout'%}">Log Out</a></p>
+            {% else %}
+            <p>No esta autenticado</p>
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'signup' %}">Sign Up</a>
+            {% endif %}
+            <br>
+        </div>
     </header>
     <section>
         <div>
